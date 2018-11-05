@@ -11,8 +11,9 @@ Gem::Specification.new do |spec|
   spec.email         = ['tarek.samni@gmail.com']
 
   spec.summary       = 'Lock ActiveRecord resources'
-  spec.description   = 'A ruby gem to lock ActiveRecord resources to prevent \
-concurrent (multiple actors) access/editing of the resource'
+  # rubocop:disable Metrics/LineLength
+  spec.description   = 'A ruby gem to lock ActiveRecord resources to prevent concurrent (multiple actors) access/editing of the resource'
+  # rubocop:enable Metrics/LineLength
   spec.homepage      = 'https://github.com/tareksamni/acts_as_lockable_by'
   spec.license       = 'MIT'
 
