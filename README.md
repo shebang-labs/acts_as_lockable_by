@@ -5,7 +5,7 @@
 
 This gem was originally developed and maintained by [ABTION](https://abtion.com/). Its main goal is providing the ability to lock a resource/object so that no other users/lockers can access it till the lock is released or the ttl timesout.
 
-An example usage for this gem is when you need a blog post (resource) to be only edtiable by 1 user concurrently. So the first user to lock the blog post to himself will always have access and be able to edit it. This user will need to renew the lock before the `ttl` expires otherwise the post will be unlocked and any other users can lock it to themselves.
+An example usage for this gem is when you need a blog post (resource) to be only edtiable by 1 user concurrently. So the first user to lock the blog post to himself will always have access and be able to edit it. This user will need to renew the lock before the `ttl` expires otherwise the post will be unlocked/released and any other users can lock it to themselves.
 
 ActsAsLockableBy uses `redis` as a distributed efficient lock manager/backend with its built-in ability to expire locks when `ttl` expires.
 
