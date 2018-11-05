@@ -9,7 +9,6 @@ module ActsAsLockableBy
 
     included do
       class_attribute :lock_id, :ttl
-      acts_as_lockable_by(:id)
     end
 
     class_methods do

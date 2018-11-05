@@ -3,11 +3,13 @@
 [![Gem Version](https://badge.fury.io/rb/acts_as_lockable_by.svg)](http://badge.fury.io/rb/acts_as_lockable_by)
 [![Build Status](https://travis-ci.com/tareksamni/acts_as_lockable_by.svg?branch=master)](https://travis-ci.com/tareksamni/acts_as_lockable_by)
 
-This gem was originally developed and maintained by [ABTION](https://abtion.com/). Its main goal is providing the ability to lock a resource/object so that no other users/lockers can access it till the lock is released or the ttl timesout.
+This gem was originally developed and maintained by [ABTION](https://abtion.com/). Its main goal is providing the ability to lock a resource so that no other users/lockers can access it till the lock is released or the ttl expires. It uses `redis` a shared memory space to share locks across different deployments which enables easy horizontal scalability for your ruby/rails project on multiple servers.
 
-An example usage for this gem is when you need a blog post (resource) to be only edtiable by 1 user concurrently. So the first user to lock the blog post to himself will always have access and be able to edit it. This user will need to renew the lock before the `ttl` expires otherwise the post will be unlocked and any other users can lock it to themselves.
+An example usage for this gem is when you need a blog post (resource) to be only edtiable by 1 user concurrently. So the first user to lock the blog post to himself will always have access and be able to edit it. This user will need to renew the lock before the `ttl` expires otherwise the post will be unlocked/released and any other users can lock it to themselves.
 
-ActsAsLockableBy uses `redis` as a distributed efficient lock manager/backend with its built-in ability to expire locks when `ttl` expires.
+`ActsAsLockableBy` uses `redis` as a shared distributed efficient lock manager with its built-in ability to expire locks when `ttl` expires.
+
+The `lock`, `unlock` and `renew_lock` methods in this gem are all atomic operations and running as one redis call on the redis server. That even multiple clients calling and of these methods against the same key will never enter into a race condition or thread unsafety.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
