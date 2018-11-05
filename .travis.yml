@@ -6,7 +6,7 @@ rvm:
 before_install: gem install bundler -v 1.17.1
 script:
   - bundle exec rubocop
-  - bundle exec rake rspec
+  - bundle exec rspec
 services:
   - redis-server
 deploy:
