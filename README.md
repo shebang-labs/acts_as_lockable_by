@@ -7,7 +7,9 @@ This gem was originally developed and maintained by [ABTION](https://abtion.com/
 
 An example usage for this gem is when you need a blog post (resource) to be only edtiable by 1 user concurrently. So the first user to lock the blog post to himself will always have access and be able to edit it. This user will need to renew the lock before the `ttl` expires otherwise the post will be unlocked/released and any other users can lock it to themselves.
 
-ActsAsLockableBy uses `redis` as a distributed efficient lock manager/backend with its built-in ability to expire locks when `ttl` expires.
+`ActsAsLockableBy` uses `redis` as a shared distributed efficient lock manager with its built-in ability to expire locks when `ttl` expires.
+
+The `lock`, `unlock` and `renew_lock` methods in this gem are all atomic operations and running as one redis call on the redis server. That even multiple clients calling and of these methods against the same key will never enter into a race condition or thread unsafety.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
