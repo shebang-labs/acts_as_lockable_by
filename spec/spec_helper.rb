@@ -2,9 +2,9 @@
 
 require 'bundler/setup'
 require 'byebug'
-require 'acts_as_lockable'
+require 'acts_as_lockable_by'
 
-ActsAsLockable.configure do |config|
+ActsAsLockableBy.configure do |config|
   config.redis = Redis.new(url: ENV['REDIS_URL'])
   config.ttl = 30.seconds
 end

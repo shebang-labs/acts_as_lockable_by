@@ -12,7 +12,7 @@ services:
 deploy:
   provider: rubygems
   api_key: $RUBYGEMS_API_KEY
-  gem: acts_as_lockable
+  gem: acts_as_lockable_by
   on:
     tags: true
-    repo: tareksamni/acts_as_lockable
+    repo: tareksamni/acts_as_lockable_by

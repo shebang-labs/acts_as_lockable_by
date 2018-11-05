@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module ActsAsLockable
+module ActsAsLockableBy
   module Lockable
     extend ActiveSupport::Concern
 
@@ -9,15 +9,18 @@ module ActsAsLockable
 
     included do
       class_attribute :lock_id, :ttl
-      acts_as_lockable(:id)
+      acts_as_lockable_by(:id)
     end
 
     class_methods do
-      def acts_as_lockable(lock_id, ttl: ActsAsLockable.configuration.ttl.to_i)
+      def acts_as_lockable_by(
+        lock_id,
+        ttl: ActsAsLockableBy.configuration.ttl.to_i
+      )
         self.lock_id = lock_id
         self.ttl = ttl
-        extend ActsAsLockable::Lockable::SingletonMethods
-        include ActsAsLockable::Lockable::InstanceMethods
+        extend ActsAsLockableBy::Lockable::SingletonMethods
+        include ActsAsLockableBy::Lockable::InstanceMethods
       end
     end
 
@@ -75,11 +78,11 @@ module ActsAsLockable
       private
 
       def redis
-        ActsAsLockable.configuration.redis
+        ActsAsLockableBy.configuration.redis
       end
 
       def lock_key
-        "ActsAsLockable:#{self.class.name}:#{lock_id_value}"
+        "ActsAsLockableBy:#{self.class.name}:#{lock_id_value}"
       end
 
       def lock_id_value

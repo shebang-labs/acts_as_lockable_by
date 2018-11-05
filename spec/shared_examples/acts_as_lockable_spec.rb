@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-RSpec.shared_examples_for ActsAsLockable::Lockable do
+RSpec.shared_examples_for ActsAsLockableBy::Lockable do
   let(:id) { 'SOME_IDENTIFIER' }
 
   around(:each) do |example|
-    ActsAsLockable.configuration.redis.flushall
+    ActsAsLockableBy.configuration.redis.flushall
     begin
       example.run
     ensure
-      ActsAsLockable.configuration.redis.flushall
+      ActsAsLockableBy.configuration.redis.flushall
     end
   end
 

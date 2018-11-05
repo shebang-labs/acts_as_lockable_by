@@ -2,24 +2,24 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'acts_as_lockable/version'
+require 'acts_as_lockable_by/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'acts_as_lockable'
-  spec.version       = ActsAsLockable::VERSION
+  spec.name          = 'acts_as_lockable_by'
+  spec.version       = ActsAsLockableBy::VERSION
   spec.authors       = ['Tarek N. Elsamni']
   spec.email         = ['tarek.samni@gmail.com']
 
   spec.summary       = 'Lock ActiveRecord resources'
   spec.description   = 'A ruby gem to lock ActiveRecord resources to prevent \
 concurrent (multiple actors) access/editing of the resource'
-  spec.homepage      = 'https://github.com/tareksamni/acts_as_lockable'
+  spec.homepage      = 'https://github.com/tareksamni/acts_as_lockable_by'
   spec.license       = 'MIT'
 
   if spec.respond_to?(:metadata)
     spec.metadata['homepage_uri'] = spec.homepage
-    spec.metadata['source_code_uri'] = 'https://github.com/tareksamni/acts_as_lockable'
-    spec.metadata['changelog_uri'] = 'https://github.com/tareksamni/acts_as_lockable/commits/master'
+    spec.metadata['source_code_uri'] = 'https://github.com/tareksamni/acts_as_lockable_by'
+    spec.metadata['changelog_uri'] = 'https://github.com/tareksamni/acts_as_lockable_by/commits/master'
   else
     raise 'RubyGems 2.0 or newer is required to protect against ' \
       'public gem pushes.'

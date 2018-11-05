@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'active_support/all'
-require 'acts_as_lockable/version'
+require 'acts_as_lockable_by/version'
 require 'redis'
 
-module ActsAsLockable
+module ActsAsLockableBy
   extend ActiveSupport::Autoload
   autoload :Lockable
 
@@ -28,5 +28,5 @@ module ActsAsLockable
 end
 
 ActiveSupport.on_load(:active_record) do
-  include ActsAsLockable::Lockable
+  include ActsAsLockableBy::Lockable
 end
