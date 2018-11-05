@@ -35,13 +35,13 @@ concurrent (multiple actors) access/editing of the resource'
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'activesupport', ['~> 5.0']
-  spec.add_runtime_dependency 'redis'
+  spec.add_runtime_dependency 'redis', '~> 4'
 
-  spec.add_development_dependency 'awesome_print'
+  spec.add_development_dependency 'awesome_print', '~> 1.8'
   spec.add_development_dependency 'bundler', '~> 1.17'
-  spec.add_development_dependency 'byebug'
+  spec.add_development_dependency 'byebug', '~> 10.0'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'solargraph'
+  spec.add_development_dependency 'rubocop', '~> 0.52'
+  spec.add_development_dependency 'solargraph', '~> 0.28'
 end

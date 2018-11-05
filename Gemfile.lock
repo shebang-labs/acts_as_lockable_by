@@ -3,7 +3,7 @@ PATH
   specs:
     acts_as_lockable (0.1.0)
       activesupport (~> 5.0)
-      redis
+      redis (~> 4)
 
 GEM
   remote: https://rubygems.org/
@@ -84,13 +84,13 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_lockable!
-  awesome_print
+  awesome_print (~> 1.8)
   bundler (~> 1.17)
-  byebug
+  byebug (~> 10.0)
   rake (~> 10.0)
   rspec (~> 3.0)
-  rubocop
-  solargraph
+  rubocop (~> 0.52)
+  solargraph (~> 0.28)
 
 BUNDLED WITH
    1.17.1
