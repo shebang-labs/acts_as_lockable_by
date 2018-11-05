@@ -1,7 +1,13 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
+require 'byebug'
 require 'acts_as_lockable'
+
+ActsAsLockable.configure do |config|
+  config.redis = Redis.new(url: ENV['REDIS_URL'])
+  config.ttl = 30.seconds
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -14,3 +20,13 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+# Include helpers
+Dir[
+  File.join(File.dirname(__FILE__), 'helpers', '**', '*.rb')
+].each { |f| require f }
+
+# Include shared examples
+Dir[
+  File.join(File.dirname(__FILE__), 'shared_examples', '**', '*.rb')
+].each { |f| require f }
