@@ -47,8 +47,9 @@ class User < ActiveRecord::Base
   # :ttl default to global configured ttl if not provided
   acts_as_lockable_by :id, ttl: 60.seconds
 end
-# or
+# or if not using ActiveRecord
 class Post
+  include ActsAsLockableBy::Lockable
   acts_as_lockable_by :post_id # default to global configured ttl
 
   def post_id
@@ -79,6 +80,14 @@ Check if an object/resource is locked
 post.locked? # false
 post.lock('Tarek Elsamni') # true
 post.locked? # true
+```
+
+Renew a lock before it expires
+
+```ruby
+post.lock('Tarek Elsamni') # true
+post.renew_lock('Someone Else') # false - 'Someone Else' did not lock it!
+post.renew_lock('Tarek Elsamni') # true - 'Tarek Elsamni' locked it!
 ```
 
 Who locked an object?
