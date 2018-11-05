@@ -1,4 +1,3 @@
----
 sudo: false
 language: ruby
 cache: bundler
@@ -7,7 +6,14 @@ rvm:
 before_install: gem install bundler -v 1.17.1
 script:
   - bundle exec rubocop
-  - bundle exec rspec
-
+  - bundle exec rake rspec
 services:
   - redis-server
+deploy:
+  provider: rubygems
+  api_key:
+    secure: vmVy5dfuiaF0e6JlVbUpE/66P5/YFNNi1zSlsyDfV92iVnx6LCZh/CxlmLUT1GuC6ZrZkbA7TgTBe10rDs7t1QwNALfvXrEP3hK91AMQsOgUttPoVYO3nf2GnZ3fiZkSpSWda2AT6MAeqT5kCA1ffZ6qSsn7lCtnbdVsLWci6malALQNxlwmqbNYBhKnQVbc0rM/PdVj7USAkYSEjk6sXrHLHZ5RAmFm7cS0HD1KZhVBMytw7+wGHzKWfSkWM+Ndxa88Xx2HD21Jzttw7qKE93h//1NnvXZNKxCwGXBXaIEjN8yi/61/uEWfRoZfs97QkqXf2lAGyBL0zEAJxI+jHeUeIXGN2hH7R+t/cKNYlgT1ri1CccBVNV4wwrLGiP9aSP7fad42GE+uvOYB2l38iWNQqWv562j0mHhAHvMiqFfeWDYjVn0AcFjqyfXeXO82V/FJNNWU41GtpOWnBAI41BMyAadSfpZ+5tu/DNfifaajWJYr5gpvXJDGCdxGXr3KlS5AGqVR84bM5ycTJIGFu2MXoFqcNC2kWv35IoubZyxEZQT89Ix69OOTEfEDV6XZiCHfNLwmX9068YxcT4Mlon7+558Fe/tVozBehypitaeaCjVasE01+yJiMCTRuBTIj7Ligsndsf/CHSo3sAorU5r3elvNAwv1twmphLoRysI=
+  gem: acts_as_lockable
+  on:
+    tags: true
+    repo: tareksamni/acts_as_lockable
