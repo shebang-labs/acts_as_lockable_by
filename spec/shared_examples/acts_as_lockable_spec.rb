@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 RSpec.shared_examples_for ActsAsLockable::Lockable do
   let(:id) { 'SOME_IDENTIFIER' }
 
