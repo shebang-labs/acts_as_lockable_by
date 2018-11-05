@@ -9,6 +9,19 @@ An example usage for this gem is when you need a blog post (resource) to be only
 
 ActsAsLockableBy uses `redis` as a distributed efficient lock manager/backend with its built-in ability to expire locks when `ttl` expires.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Installation](#installation)
+  - [Post Installation](#post-installation)
+- [Usage](#usage)
+- [Development](#development)
+- [Contributing](#contributing)
+- [License](#license)
+- [Code of Conduct](#code-of-conduct)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Installation
 
 Add this line to your application's Gemfile:
