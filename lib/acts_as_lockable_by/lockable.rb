@@ -30,7 +30,7 @@ module ActsAsLockableBy
 
       # rubocop:disable Naming/PredicateName
       def is_lockable?
-        tagger?
+        lockable?
       end
       # rubocop:enable Naming/PredicateName
     end
