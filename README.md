@@ -97,7 +97,7 @@ post.lock('Tarek Elsamni') # true
 post.locked? # true
 ```
 
-Renew a lock before it expires
+Renew a lock before its ttl expires
 
 ```ruby
 post.lock('Tarek Elsamni') # true
