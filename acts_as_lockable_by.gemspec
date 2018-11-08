@@ -26,11 +26,8 @@ Gem::Specification.new do |spec|
       'public gem pushes.'
   end
 
-  spec.files = Dir.chdir(File.expand_path(__dir__)) do
-    `git ls-files -z`.split("\x0").reject do |f|
-      f.match(%r{^(test|spec|features)/})
-    end
-  end
+  spec.files = Dir.glob('{bin,lib}/**/*') + %w[LICENSE README.md]
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.bindir        = 'bin'
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
