@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
 
   if spec.respond_to?(:metadata)
+    spec.metadata['allowed_push_host'] = 'https://rubygems.org'
     spec.metadata['homepage_uri'] = spec.homepage
     spec.metadata['source_code_uri'] = 'https://github.com/tareksamni/acts_as_lockable_by'
     spec.metadata['changelog_uri'] = 'https://github.com/tareksamni/acts_as_lockable_by/commits/master'
