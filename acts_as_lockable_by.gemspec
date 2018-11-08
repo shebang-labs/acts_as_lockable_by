@@ -17,15 +17,12 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/tareksamni/acts_as_lockable_by'
   spec.license       = 'MIT'
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = 'https://rubygems.org'
-    spec.metadata['homepage_uri'] = spec.homepage
-    spec.metadata['source_code_uri'] = 'https://github.com/tareksamni/acts_as_lockable_by'
-    spec.metadata['changelog_uri'] = 'https://github.com/tareksamni/acts_as_lockable_by/commits/master'
-  else
-    raise 'RubyGems 2.0 or newer is required to protect against ' \
-      'public gem pushes.'
-  end
+  spec.metadata = {
+    'allowed_push_host' => 'https://rubygems.org',
+    'homepage_uri' => spec.homepage,
+    'source_code_uri' => 'https://github.com/tareksamni/acts_as_lockable_by',
+    'changelog_uri' => 'https://github.com/tareksamni/acts_as_lockable_by/commits/master'
+  }
 
   spec.files = Dir.glob('{bin,lib}/**/*') + %w[LICENSE README.md]
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
