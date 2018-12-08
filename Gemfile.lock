@@ -59,7 +59,7 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.4.0)
     ruby-progressbar (1.10.0)
-    solargraph (0.29.1)
+    solargraph (0.29.3)
       eventmachine (~> 1.2, >= 1.2.5)
       htmlentities (~> 4.3, >= 4.3.4)
       kramdown (~> 1.16)
