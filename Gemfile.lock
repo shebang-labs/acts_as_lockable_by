@@ -34,7 +34,7 @@ GEM
     powerpack (0.1.2)
     rainbow (3.0.0)
     rake (12.3.2)
-    redis (4.0.3)
+    redis (4.1.0)
     reverse_markdown (1.1.0)
       nokogiri
     rspec (3.8.0)
