@@ -35,7 +35,7 @@ GEM
     psych (3.1.0)
     rainbow (3.0.0)
     rake (12.3.2)
-    redis (4.1.0)
+    redis (4.1.1)
     reverse_markdown (1.1.0)
       nokogiri
     rspec (3.8.0)
