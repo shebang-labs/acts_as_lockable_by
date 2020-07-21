@@ -12,3 +12,6 @@
 
 # byebug history
 .byebug_history
+
+# RubyMine project configs
+.idea/
