@@ -1,7 +1,7 @@
 # ActsAsLockableBy
 
 [![Gem Version](https://badge.fury.io/rb/acts_as_lockable_by.svg)](http://badge.fury.io/rb/acts_as_lockable_by)
-[![Build Status](https://travis-ci.com/tareksamni/acts_as_lockable_by.svg?branch=master)](https://travis-ci.com/tareksamni/acts_as_lockable_by)
+[![Build Status](https://travis-ci.com/shebang-labs/acts_as_lockable_by.svg?branch=master)](https://travis-ci.com/shebang-labs/acts_as_lockable_by)
 
 This gem was originally developed, incubated and maintained at [ABTION](https://abtion.com/). Its main goal is providing the ability to lock a resource so that no other users/lockers can access it till the lock is released or the ttl expires. It uses `redis` a shared memory space to share locks across different deployments which enables easy horizontal scalability for your ruby/rails project on multiple servers.
 
@@ -127,7 +127,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/tareksamni/acts_as_lockable_by. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/shebang-labs/acts_as_lockable_by. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -135,4 +135,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the ActsAsLockable project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/tareksamni/acts_as_lockable_by/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the ActsAsLockable project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/shebang-labs/acts_as_lockable_by/blob/master/CODE_OF_CONDUCT.md).
