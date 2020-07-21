@@ -15,4 +15,4 @@ deploy:
   gem: acts_as_lockable_by
   on:
     tags: true
-    repo: tareksamni/acts_as_lockable_by
+    repo: shebang-labs/acts_as_lockable_by
