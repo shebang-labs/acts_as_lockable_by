@@ -1,6 +1,6 @@
 # ActsAsLockableBy
 
-[![Gem Version](https://badge.fury.io/rb/acts_as_lockable_by.svg)](http://badge.fury.io/rb/acts_as_lockable_by)
+[![Gem Version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=rb&type=6&v=0.1.12&x2=0)](http://badge.fury.io/rb/acts_as_lockable_by)
 [![Build Status](https://travis-ci.com/shebang-labs/acts_as_lockable_by.svg?branch=master)](https://travis-ci.com/shebang-labs/acts_as_lockable_by)
 
 This gem was originally developed, incubated and maintained at [ABTION](https://www.abtion.com/). Its main goal is providing the ability to lock a resource so that no other users/lockers can access it till the lock is released or the ttl expires. It uses `redis` a shared memory space to share locks across different deployments which enables easy horizontal scalability for your ruby/rails project on multiple servers.
