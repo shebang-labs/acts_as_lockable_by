@@ -24,9 +24,9 @@ end
 # Include helpers
 Dir[
   File.join(File.dirname(__FILE__), 'helpers', '**', '*.rb')
-].each { |f| require f }
+].sort.each { |f| require f }
 
 # Include shared examples
 Dir[
   File.join(File.dirname(__FILE__), 'shared_examples', '**', '*.rb')
-].each { |f| require f }
+].sort.each { |f| require f }
